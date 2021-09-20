@@ -12,4 +12,9 @@ UITextField (Separator)
 安卓版自动加入分隔符
 AutoSeparateTextWatcher.java，主要通过自定义TextWatch实现
 
+# flutter dart code
+text_mixin.dart
+类似Flutter framework里的XXXBinding机制
+用来理解多mixin继承和调用关系
+
 
