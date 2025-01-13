@@ -17,4 +17,5 @@ text_mixin.dart
 类似Flutter framework里的XXXBinding机制
 用来理解多mixin继承和调用关系
 
-
+check_unused_images.dart
+检查flutter中未被使用的图片资源
