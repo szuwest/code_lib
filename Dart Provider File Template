@@ -1,0 +1,18 @@
+#set( $nameparts = $NAME.split("_"))
+#set( $namepart = '')
+#set( $classname = '')
+#foreach( $namepart in $nameparts )
+    #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+#end
+///  ${FILE_NAME}
+///  FranklinWH App Flutter Module
+///
+///  Created by West Deng on ${DATE}.
+///  Copyright © ${YEAR} FranklinWH. All rights reserved.
+library;
+ 
+import 'package:franklinwh2/sections/base/view_model/base_provider.dart';
+ 
+class $classname extends BaseProvider {
+  $classname();
+}
