@@ -1,0 +1,44 @@
+#set( $nameparts = $NAME.split("_"))
+#set( $nameart = '')
+#set( $classname = '')
+#foreach( $namepart in $nameparts )
+    #set( $classname = $classname + $namepart.substring(0, 1).toUpperCase() + $namepart.substring(1))
+#end
+#if( $NAME.endsWith("_page") )
+    #set( $providername = $classname.replace("Page", "Provider"))
+    #set( $providerfilename = $NAME.replace("_page", "_provider") + '.dart')
+#else
+    #set( $providername = $classname + 'Provider')
+    #set( $providerfilename = $NAME + '_provider.dart')
+#end
+#set( $statename = $classname + 'State')
+///  ${FILE_NAME}
+///  FranklinWH App Flutter Module
+///
+///  Created by West Deng on ${DATE}.
+///  Copyright © ${YEAR} FranklinWH. All rights reserved.
+library;
+ 
+import 'package:flutter/cupertino.dart';
+import 'package:franklinwh2/sections/base/view/base_provider_node.dart';
+import 'package:franklinwh2/sections/widget/page_scaffold.dart';
+ 
+import '../view_model/$providerfilename';
+ 
+class $classname extends BaseProviderNode<$providername> {
+  $classname({super.key}) : super(params: []);
+     
+  @override
+  $statename createState() => $statename();
+}
+ 
+class $statename extends BaseContentState<$providername> {
+  @override
+  Widget buildContent(BuildContext context) {
+    return PageScaffold(body: body());
+  }
+  
+  Widget body() {
+    return Container();
+  }
+}
